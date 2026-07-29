@@ -1,0 +1,23 @@
+{
+  "name": "@trellis.computer/workflows/feature-development",
+  "version": "0.1.0",
+  "content": "sha256:6dfdd8d2b9c56e79b5d69e5d6509b4363007c275456adb7acbafd90c70dcd072",
+  "schemas": [
+    {
+      "@id": "core:WorkflowStep",
+      "@type": "trellis:Schema",
+      "version": "0.1.0",
+      "depends": {
+        "core:Workflow": ">=1.0.0"
+      }
+    },
+    {
+      "@id": "core:WorkflowGate",
+      "@type": "trellis:Schema",
+      "version": "0.1.0",
+      "depends": {
+        "core:Workflow": ">=1.0.0"
+      }
+    }
+  ]
+}

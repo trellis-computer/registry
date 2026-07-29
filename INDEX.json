@@ -1,0 +1,34 @@
+{
+  "published": "2026-07-29T23:51:45.489Z",
+  "packages": {
+    "workflows": {
+      "feature-development": {
+        "latest": "0.1.0",
+        "versions": {
+          "0.1.0": {
+            "content": "sha256:6dfdd8d2b9c56e79b5d69e5d6509b4363007c275456adb7acbafd90c70dcd072",
+            "revision": "refs/tags/v0.1.0",
+            "schemas": [
+              {
+                "@id": "core:WorkflowStep",
+                "@type": "trellis:Schema",
+                "version": "0.1.0",
+                "depends": {
+                  "core:Workflow": ">=1.0.0"
+                }
+              },
+              {
+                "@id": "core:WorkflowGate",
+                "@type": "trellis:Schema",
+                "version": "0.1.0",
+                "depends": {
+                  "core:Workflow": ">=1.0.0"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
