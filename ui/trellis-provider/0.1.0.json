@@ -1,0 +1,42 @@
+{
+  "name": "@trellis.computer/ui/trellis-provider",
+  "version": "0.1.0",
+  "content": "sha256:219bc36bd04d5e82b9e9462624102db8cdba536ab76ba1bb6220ae8f0a2001ca",
+  "depends": {},
+  "schemas": [
+    {
+      "@id": "trellis:ThemeContext",
+      "@type": "trellis:Schema",
+      "version": "0.1.0",
+      "fields": [
+        {
+          "name": "mode",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "accent",
+          "valueType": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "@id": "trellis:EntityContext",
+      "@type": "trellis:Schema",
+      "version": "0.1.0",
+      "fields": [
+        {
+          "name": "entityId",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "vantage",
+          "valueType": "string",
+          "required": false
+        }
+      ]
+    }
+  ]
+}

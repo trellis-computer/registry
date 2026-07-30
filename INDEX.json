@@ -1,7 +1,75 @@
 {
-  "published": "2026-07-29T23:51:45.489Z",
+  "published": "2026-07-30T00:22:07.937Z",
   "packages": {
+    "ui": {
+      "trellis-provider": {
+        "latest": "0.1.0",
+        "versions": {
+          "0.1.0": {
+            "content": "sha256:219bc36bd04d5e82b9e9462624102db8cdba536ab76ba1bb6220ae8f0a2001ca",
+            "revision": "refs/tags/v0.1.0",
+            "schemas": [
+              {
+                "@id": "trellis:ThemeContext",
+                "@type": "trellis:Schema",
+                "version": "0.1.0",
+                "fields": [
+                  {
+                    "name": "mode",
+                    "valueType": "string",
+                    "required": true
+                  },
+                  {
+                    "name": "accent",
+                    "valueType": "string",
+                    "required": false
+                  }
+                ]
+              },
+              {
+                "@id": "trellis:EntityContext",
+                "@type": "trellis:Schema",
+                "version": "0.1.0",
+                "fields": [
+                  {
+                    "name": "entityId",
+                    "valueType": "string",
+                    "required": true
+                  },
+                  {
+                    "name": "vantage",
+                    "valueType": "string",
+                    "required": false
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
     "workflows": {
+      "bug-fix": {
+        "latest": "0.1.0",
+        "versions": {
+          "0.1.0": {
+            "content": "sha256:50c83bf47bc5a548c4b4bd9be20382cbde6d8c92770c126458248ec966f7a392",
+            "revision": "refs/tags/v0.1.0",
+            "schemas": [
+              {
+                "@id": "trellis:bug-fix",
+                "@type": "trellis:Schema",
+                "version": "0.1.0"
+              },
+              {
+                "@id": "trellis:BugReport",
+                "@type": "trellis:Schema",
+                "version": "0.1.0"
+              }
+            ]
+          }
+        }
+      },
       "feature-development": {
         "latest": "0.1.0",
         "versions": {

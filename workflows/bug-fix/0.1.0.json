@@ -1,0 +1,20 @@
+{
+  "name": "@trellis.computer/workflows/bug-fix",
+  "version": "0.1.0",
+  "content": "sha256:50c83bf47bc5a548c4b4bd9be20382cbde6d8c92770c126458248ec966f7a392",
+  "depends": {
+    "@trellis.computer/workflows/feature-development": ">=0.1.0"
+  },
+  "schemas": [
+    {
+      "@id": "trellis:bug-fix",
+      "@type": "trellis:Schema",
+      "version": "0.1.0"
+    },
+    {
+      "@id": "trellis:BugReport",
+      "@type": "trellis:Schema",
+      "version": "0.1.0"
+    }
+  ]
+}
