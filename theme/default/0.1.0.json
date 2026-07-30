@@ -1,0 +1,89 @@
+{
+  "name": "@trellis.computer/theme/default",
+  "version": "0.1.0",
+  "content": "sha256:33ed9f16944c148af1ba4a8456081c02d889e7a7979339c5a4648837836fd216",
+  "depends": {
+    "@trellis.computer/ui/trellis-provider": ">=0.1.0"
+  },
+  "schemas": [
+    {
+      "@id": "trellis:ThemeConfig",
+      "@type": "trellis:Schema",
+      "version": "0.1.0",
+      "fields": [
+        {
+          "name": "mode",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "accent",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "baseHue",
+          "valueType": "number",
+          "required": false
+        }
+      ]
+    },
+    {
+      "@id": "trellis:ThemeTokens",
+      "@type": "trellis:Schema",
+      "version": "0.1.0",
+      "fields": [
+        {
+          "name": "entityIssue",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "entityLane",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "entityProject",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "entityPerson",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "statusInProgress",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "statusDone",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "statusPending",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "statusBlocked",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "colorFormat",
+          "valueType": "string",
+          "required": false
+        },
+        {
+          "name": "dataTheme",
+          "valueType": "string",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
