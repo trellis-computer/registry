@@ -1,0 +1,101 @@
+{
+  "name": "@trellis.computer/ontology/workflow",
+  "version": "0.1.0",
+  "content": "sha256:96d15dae4ffe49896b0f5e905f76cb878924456a986516e2e0feef4303e81d8d",
+  "depends": {},
+  "schemas": [
+    {
+      "@id": "core:Workflow",
+      "@type": "trellis:Schema",
+      "version": "0.1.0",
+      "fields": [
+        {
+          "name": "name",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "description",
+          "valueType": "string",
+          "required": false
+        },
+        {
+          "name": "version",
+          "valueType": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "@id": "core:WorkflowStep",
+      "@type": "trellis:Schema",
+      "version": "0.1.0",
+      "fields": [
+        {
+          "name": "name",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "stepType",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "config",
+          "valueType": "string",
+          "required": false
+        },
+        {
+          "name": "dependsOn",
+          "valueType": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "@id": "core:WorkflowGate",
+      "@type": "trellis:Schema",
+      "version": "0.1.0",
+      "fields": [
+        {
+          "name": "condition",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "passBranch",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "failBranch",
+          "valueType": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "@id": "core:Trigger",
+      "@type": "trellis:Schema",
+      "version": "0.1.0",
+      "fields": [
+        {
+          "name": "eventType",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "name": "schedule",
+          "valueType": "string",
+          "required": false
+        },
+        {
+          "name": "webhookUrl",
+          "valueType": "string",
+          "required": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,189 @@
 {
-  "published": "2026-07-30T00:31:05.513Z",
+  "published": "2026-07-30T00:47:57.647Z",
   "packages": {
+    "ontology": {
+      "pipeline": {
+        "latest": "0.1.0",
+        "versions": {
+          "0.1.0": {
+            "content": "sha256:1863997634175dd1a8f09355f97db04b61b86028ec3c669360085e14ad73eaf1",
+            "revision": "refs/tags/v0.1.0",
+            "schemas": [
+              {
+                "@id": "core:Pipeline",
+                "@type": "trellis:Schema",
+                "version": "0.1.0",
+                "fields": [
+                  {
+                    "name": "name",
+                    "valueType": "string",
+                    "required": true
+                  },
+                  {
+                    "name": "description",
+                    "valueType": "string",
+                    "required": false
+                  }
+                ]
+              },
+              {
+                "@id": "core:Stage",
+                "@type": "trellis:Schema",
+                "version": "0.1.0",
+                "fields": [
+                  {
+                    "name": "stageName",
+                    "valueType": "string",
+                    "required": true
+                  },
+                  {
+                    "name": "inputs",
+                    "valueType": "string",
+                    "required": false
+                  },
+                  {
+                    "name": "outputs",
+                    "valueType": "string",
+                    "required": false
+                  },
+                  {
+                    "name": "runner",
+                    "valueType": "string",
+                    "required": true
+                  }
+                ]
+              },
+              {
+                "@id": "core:PipelineEdge",
+                "@type": "trellis:Schema",
+                "version": "0.1.0",
+                "fields": [
+                  {
+                    "name": "sourceStage",
+                    "valueType": "string",
+                    "required": true
+                  },
+                  {
+                    "name": "targetStage",
+                    "valueType": "string",
+                    "required": true
+                  },
+                  {
+                    "name": "edgeCondition",
+                    "valueType": "string",
+                    "required": false
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "workflow": {
+        "latest": "0.1.0",
+        "versions": {
+          "0.1.0": {
+            "content": "sha256:96d15dae4ffe49896b0f5e905f76cb878924456a986516e2e0feef4303e81d8d",
+            "revision": "refs/tags/v0.1.0",
+            "schemas": [
+              {
+                "@id": "core:Workflow",
+                "@type": "trellis:Schema",
+                "version": "0.1.0",
+                "fields": [
+                  {
+                    "name": "name",
+                    "valueType": "string",
+                    "required": true
+                  },
+                  {
+                    "name": "description",
+                    "valueType": "string",
+                    "required": false
+                  },
+                  {
+                    "name": "version",
+                    "valueType": "string",
+                    "required": true
+                  }
+                ]
+              },
+              {
+                "@id": "core:WorkflowStep",
+                "@type": "trellis:Schema",
+                "version": "0.1.0",
+                "fields": [
+                  {
+                    "name": "name",
+                    "valueType": "string",
+                    "required": true
+                  },
+                  {
+                    "name": "stepType",
+                    "valueType": "string",
+                    "required": true
+                  },
+                  {
+                    "name": "config",
+                    "valueType": "string",
+                    "required": false
+                  },
+                  {
+                    "name": "dependsOn",
+                    "valueType": "string",
+                    "required": false
+                  }
+                ]
+              },
+              {
+                "@id": "core:WorkflowGate",
+                "@type": "trellis:Schema",
+                "version": "0.1.0",
+                "fields": [
+                  {
+                    "name": "condition",
+                    "valueType": "string",
+                    "required": true
+                  },
+                  {
+                    "name": "passBranch",
+                    "valueType": "string",
+                    "required": true
+                  },
+                  {
+                    "name": "failBranch",
+                    "valueType": "string",
+                    "required": true
+                  }
+                ]
+              },
+              {
+                "@id": "core:Trigger",
+                "@type": "trellis:Schema",
+                "version": "0.1.0",
+                "fields": [
+                  {
+                    "name": "eventType",
+                    "valueType": "string",
+                    "required": true
+                  },
+                  {
+                    "name": "schedule",
+                    "valueType": "string",
+                    "required": false
+                  },
+                  {
+                    "name": "webhookUrl",
+                    "valueType": "string",
+                    "required": false
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
     "theme": {
       "default": {
         "latest": "0.1.0",
